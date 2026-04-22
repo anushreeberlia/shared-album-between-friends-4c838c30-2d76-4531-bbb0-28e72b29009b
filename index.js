@@ -6,6 +6,7 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
+app.use(require("express").static(require("path").join(__dirname, "public")));
 const PORT = process.env.PORT || 3000;
 
 // Middleware
